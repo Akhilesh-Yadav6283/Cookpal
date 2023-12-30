@@ -161,3 +161,13 @@ function DisplayRecipes(RecipesToDisplay){
     });
 }
 DisplayRecipes(recipes);
+
+function filteredRecipesfn(type="all"){
+    if(type=="all"){
+        DisplayRecipes(recipes);
+    }
+    else{
+        filteredRecipes = recipes.filter( (recipe) => recipe.type==type);
+        DisplayRecipes(filteredRecipes);
+    }
+}
